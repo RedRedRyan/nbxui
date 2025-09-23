@@ -258,7 +258,7 @@ body {
             .sub{
                 @apply md:col-span-8 flex grid-flow-col items-center justify-center px-5;
                 .stock{
-                    @apply bg-transparent md:col-span-4;
+                    @apply bg-transparent md:col-span-4 flex-wrap;
                 }
             }
 
