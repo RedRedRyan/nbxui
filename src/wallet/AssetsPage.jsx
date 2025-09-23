@@ -47,6 +47,7 @@ export default function AssetsPage() {
 
 
 
+
             <div className="p-4 space-y-6">
                 {/* Portfolio Overview */}
                 <div className="bg-white rounded-xl p-6 border border-gray-200 md:w-full">
@@ -102,6 +103,7 @@ export default function AssetsPage() {
                         </button>
                     </div>
                 </div>
+                <button className={'bg-blue rounded-2xl w-full text-green h-48 hover:bg-green hover:text-blue'}> Dash</button>
 
                 {/* Portfolio Allocation */}
                 <div className="bg-white rounded-xl p-6 border border-gray-200">

@@ -16,7 +16,8 @@ export default function Market() {
     const [sortOrder, setSortOrder] = useState('asc');
     const [showFilters, setShowFilters] = useState(false);
 
-    const filteredAndSortedStocks = useMemo(() => {
+
+     const filteredAndSortedStocks = useMemo(() => {
         let filtered = stocks.filter(stock =>
             stock.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             stock.symbol.toLowerCase().includes(searchTerm.toLowerCase())
@@ -146,20 +147,17 @@ export default function Market() {
 
             </div>
             <div className="bottom">
-                <div className={'sub'}>
-                    <div className="stock">
-                        {filteredAndSortedStocks.map(stock => (
-                            <StockCard
-                                key={stock.id}
-                                stock={stock}
-                                onToggleFavorite={handleToggleFavorite}
-                                onSelect={selectStock}
-                            />
-                        ))}
-                    </div>
-
+                <div className="sub">
+                    {/* Remove the .stock div - map StockCards directly */}
+                    {filteredAndSortedStocks.map(stock => (
+                        <StockCard
+                            key={stock.id}
+                            stock={stock}
+                            onToggleFavorite={handleToggleFavorite}
+                            onSelect={selectStock}
+                        />
+                    ))}
                 </div>
-
             </div>
 
 

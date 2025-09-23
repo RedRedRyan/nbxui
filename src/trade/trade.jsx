@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import StockChart from '../components/cards/StockCard.jsx';
 import { useMarketStore } from '../components/utils/marketStore.js';
 import { formatCurrency, formatPercentage, getChangeColor } from '../components/utils/formatter.js';
+import Dashboard from "../wallet/Dashboard.jsx";
+import StockCard from "../components/cards/StockCard.jsx";
 
 export default function Trade () {
     const navigate = useNavigate();
@@ -17,6 +19,9 @@ export default function Trade () {
         return (
             <div className="min-h-screen bg-gray-50 flex items-center justify-center">
                 <p className="text-gray-500">No stock selected</p>
+                <div className="flex items-center justify-center p-6">
+
+                </div>
             </div>
         );
     }
@@ -47,6 +52,7 @@ export default function Trade () {
 
     return (
         <div id="trade">
+
             {/* Header */}
             <div className="bg-white border-b border-gray-200 p-4 mt-36">
                 <div className="flex items-center mb-4">
@@ -203,5 +209,6 @@ export default function Trade () {
                 </div>
             </div>
         </div>
+
     );
 }

@@ -254,15 +254,11 @@ body {
             }
         }
         .bottom{
-            @apply grid grid-cols-2 lg:grid-cols-12 gap-5;
+            @apply grid grid-cols-1 md:grid-cols-12 gap-5;
             .sub{
-                @apply md:col-span-8 flex grid-flow-col items-center justify-center px-5;
-                .stock{
-                    @apply bg-transparent md:col-span-4 flex-wrap;
-                }
+                @apply col-span-1 md:col-span-12 lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-5 px-5;
+
             }
-
-
         }
 
 
