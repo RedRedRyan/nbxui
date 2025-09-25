@@ -86,20 +86,19 @@ export default function AssetsPage() {
 
                     {/* Action Buttons */}
                     <div className="grid grid-cols-3 gap-3">
-                        <button className="flex flex-col items-center p-4 bg-[#8bc819] text-white rounded-xl hover:bg-[#7ab317] transition-colors">
-                            {/* Add your plus/Add Funds icon here */}
-                            <span className="mb-1">+</span>
-                            <span className="text-sm font-medium">Add Funds</span>
+                        <button className="flex flex-col items-center p-4 bg-dark text-white rounded-xl hover:bg-blue transition-colors">
+                            <img src='/icons/add.png' alt='add' />
+                            <span className="text-sm font-bold text-green mt-2">Add Funds</span>
                         </button>
                         <button className="flex flex-col items-center p-4 bg-red-500 text-white rounded-xl hover:bg-red-600 transition-colors">
                             {/* Add your minus/Withdraw icon here */}
-                            <span className="mb-1">-</span>
-                            <span className="text-sm font-medium">Withdraw</span>
+                            <img src='/icons/withdraw.png' alt='withdraw' />
+                            <span className="text-sm font-bold text-green mt-2">Withdraw</span>
                         </button>
                         <button className="flex flex-col items-center p-4 bg-blue-500 text-white rounded-xl hover:bg-blue-600 transition-colors">
                             {/* Add your transfer/swap icon here */}
-                            <span className="mb-1">⇄</span>
-                            <span className="text-sm font-medium">Transfer</span>
+                            <img src='/icons/send.png' alt='send' />
+                            <span className="text-sm font-bold text-green mt-2">Transfer</span>
                         </button>
                     </div>
                 </div>
@@ -144,13 +143,13 @@ export default function AssetsPage() {
                 </div>
 
                 {/* Cash Balance */}
-                <div className="bg-white rounded-xl p-6 border border-gray-200">
+                <div className="bg-dark rounded-xl p-6 border border-gray-200 text-green hover:bg-green hover:text-blue ">
                     <div className="flex items-center justify-between">
                         <div>
-                            <h3 className="text-lg font-semibold text-black">Available Cash</h3>
-                            <p className="text-[#b8b6b5] text-sm">Ready for trading</p>
+                            <h3 className="text-lg font-semibold">Available Cash</h3>
+                            <p className=" text-sm">Ready for  trading</p>
                         </div>
-                        <p className="text-2xl font-bold text-green">
+                        <p className="text-2xl font-bold">
                             {formatCurrency(portfolio.cashBalance)}
                         </p>
                     </div>
