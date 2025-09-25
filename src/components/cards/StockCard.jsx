@@ -1,6 +1,6 @@
 import React from 'react';
 import {formatCurrency,formatPercentage,getChangeColor} from "../utils/formatter.js";
-
+import { Link } from 'react-router-dom';
 
 export default function StockCard({ stock, onToggleFavorite, onSelect }) {
     const isPositive = stock.change >= 0;
@@ -8,7 +8,7 @@ export default function StockCard({ stock, onToggleFavorite, onSelect }) {
 
     return (
         <div
-            className="rounded-xl p-4 border bg-green-700 border-gray-200 hover:bg-white transition-all cursor-pointer"
+            className="rounded-xl p-4 border backdrop-blur-2xl border-gray-200 hover:bg-dark transition-all cursor-pointer"
             onClick={() => onSelect(stock)}
         >
             <div className="flex items-start justify-between mb-3">
@@ -32,8 +32,9 @@ export default function StockCard({ stock, onToggleFavorite, onSelect }) {
                     </div>
                     <p className="text-[#b8b6b5] text-sm truncate">{stock.name}</p>
                 </div>
+
                 <div className="text-right">
-                    <p className="font-bold text-black text-lg">{formatCurrency(stock.currentPrice)}</p>
+                    <p className="font-bold text-white text-lg">{formatCurrency(stock.currentPrice)}</p>
                     <div className={`flex items-center text-sm ${getChangeColor(stock.change)}`}>
                         {isPositive ? (
                             <img src='/icons/up.png' alt={'change'}  />
@@ -46,7 +47,11 @@ export default function StockCard({ stock, onToggleFavorite, onSelect }) {
             </div>
 
             <div className="flex justify-between items-center text-xs text-[#b8b6b5]">
+                <Link to={`../trade`}>
+                    <button className="bg-white text-black font-outfit rounded-2xl w-16 h-6 hover:bg-green hover:text-blue">Trade</button>
+                </Link>
                 <span>Vol: {stock.volume.toLocaleString()}</span>
+
                 <span className="px-2 py-1 bg-gray-100 rounded-full">{stock.sector}</span>
             </div>
         </div>

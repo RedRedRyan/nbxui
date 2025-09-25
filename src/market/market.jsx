@@ -17,7 +17,7 @@ export default function Market() {
     const [showFilters, setShowFilters] = useState(false);
 
 
-     const filteredAndSortedStocks = useMemo(() => {
+    const filteredAndSortedStocks = useMemo(() => {
         let filtered = stocks.filter(stock =>
             stock.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             stock.symbol.toLowerCase().includes(searchTerm.toLowerCase())

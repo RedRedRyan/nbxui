@@ -22,6 +22,7 @@
     --color-dark: #0c0e4d;
     --color-black: #000000;
     --color-white: #e8f1ee;
+    --color-red: #F24E1E;
   --font-outfit: 'Outfit', sans-serif;
   --font-bitcount: 'Bitcount', sans-serif;
   --font-serif : 'Times New Roman', serif;
@@ -262,6 +263,9 @@ body {
         }
 
 
+    }
+    #stock-ad{
+        @apply w-48  bg-transparent text-green hover:bg-white hover:text-dark ;
     }
     #trade{
         @apply relative z-10 min-h-dvh w-full border border-transparent border-t-20   ;

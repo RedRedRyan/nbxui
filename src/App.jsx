@@ -4,11 +4,14 @@ import { ScrollTrigger, SplitText } from "gsap/all";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Navbar from './components/Navbar';
 
-import Hero from "./components/Hero";
+import Hero from "/src/Hero.jsx";
 import Market from "./market/market.jsx";
 import AssetsPage from "./wallet/AssetsPage.jsx";
 import Trade from "./trade/trade.jsx";
-import Dashboard from "./wallet/Dashboard.jsx";
+import Dashboard from "./profile/Dashboard.jsx";
+import Home from "./screens/Home.jsx";
+import Layout from "./screens/Layout.jsx";
+import Earn from "./profile/Earn.jsx";
 
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
@@ -16,30 +19,19 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 
 const App = () => {
  return (
-	<Router>
+	 <Router>
 
-		<Navbar />
+		 <Navbar />
 
 
-		<Routes>
-			<Route path="/" element={<Hero />}  />
-			<Route path='/market' element={<Market />} />
-			<Route path='/trade' element={<Trade />} />
-			<Route path='/wallet' element={<AssetsPage/>}/>
-			<Route path='/wallet' element={<Dashboard
-				textAutoHide={true}
-				enableStars={true}
-				enableSpotlight={true}
-				enableBorderGlow={true}
-				enableTilt={true}
-				enableMagnetism={true}
-				clickEffect={true}
-				spotlightRadius={300}
-				particleCount={12}
-				glowColor="132, 0, 255"
-			/>}/>
-		</Routes>
-	</Router>
+		 <Routes>
+			 <Route path="/" element={<Hero />}  />
+			 <Route path='/market' element={<Market />} />
+			 <Route path='/wallet' element={<AssetsPage/>}/>
+			 <Route path='/profile' element={<Earn/>}/>
+			 <Route path='/trade' element={<Trade/>}/>
+		 </Routes>
+	 </Router>
  )
 }
 

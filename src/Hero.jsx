@@ -1,9 +1,10 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
-import { useRef } from "react";
+import React, { useRef } from "react";
 import { useMediaQuery } from "react-responsive";
-import AccountType from "../auth/register/AccountType.jsx";
+import AccountType from "./auth/register/AccountType.jsx";
+import {Link} from "react-router-dom";
 
 
 const Hero = () => {
@@ -117,7 +118,7 @@ const Hero = () => {
 			<div className="space-y-5 hidden md:block">
 			 <p>Nairobi Block Exchange</p>
 			 <p className="subtitle">
-				 Company Shares  <br /> as Tokens
+				 The Next  <br /> Step
 			 </p>
 			</div>
 			
@@ -127,9 +128,9 @@ const Hero = () => {
 					 Sign In
 				 </button>
 			 </p>
-				<button>
-			 <a href="#account">Get Started</a>
-				</button>
+				<Link to={`/market`} className='bg-green text-blue hover:bg-blue hover:text-green' >
+					Market
+				</Link>
 			</div>
 		 </div>
 		</div>

@@ -38,7 +38,7 @@ const cardData = [
         label: 'Connectivity'
     },
     {
-        color: '#060010',
+        color: '#0c0e4d',
         title: 'Security',
         description: 'Enterprise-grade protection',
         label: 'Protection'
@@ -306,6 +306,7 @@ const ParticleCard = ({
     }, [animateParticles, clearAllParticles, disableAnimations, enableTilt, enableMagnetism, clickEffect, glowColor]);
 
     return (
+
         <div
             ref={cardRef}
             className={`${className} relative overflow-hidden`}
@@ -630,7 +631,7 @@ const Dashboard = ({
             )}
 
             <BentoCardGrid gridRef={gridRef}>
-                <div className="card-responsive grid gap-2">
+                <div className="card-responsive grid gap-2" >
                     {cardData.map((card, index) => {
                         const baseClassName = `card flex flex-col justify-between relative aspect-[4/3] min-h-[200px] w-full max-w-full p-5 rounded-[20px] border border-solid font-light overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(0,0,0,0.15)] ${
                             enableBorderGlow ? 'card--border-glow' : ''
@@ -662,7 +663,7 @@ const Dashboard = ({
                                     <div className="card__header flex justify-between gap-3 relative text-white">
                                         <span className="card__label text-base">{card.label}</span>
                                     </div>
-                                    <div className="card__content flex flex-col relative text-white">
+                                    <div className="card__content flex flex-col relative text-green">
                                         <h3 className={`card__title font-normal text-base m-0 mb-1 ${textAutoHide ? 'text-clamp-1' : ''}`}>
                                             {card.title}
                                         </h3>
