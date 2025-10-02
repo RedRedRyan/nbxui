@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState, useCallback } from 'react';
 import { gsap } from 'gsap';
 
-const DEFAULT_PARTICLE_COUNT = 12;
+const DEFAULT_PARTICLE_COUNT = 100;
 const DEFAULT_SPOTLIGHT_RADIUS = 300;
 const DEFAULT_GLOW_COLOR = '132, 0, 255';
 const MOBILE_BREAKPOINT = 768;
@@ -21,24 +21,24 @@ const cardData = [
     },
     {
         color: '#060010',
-        title: 'Collaboration',
-        description: 'Work together seamlessly',
-        label: 'Teamwork'
+        title: 'Invest',
+        description: 'Liquidity Pools & Stake Hbar',
+        label: 'Stake'
     },
     {
         color: '#060010',
-        title: 'Automation',
-        description: 'Streamline workflows',
-        label: 'Efficiency'
-    },
-    {
-        color: '#060010',
-        title: 'Integration',
-        description: 'Connect favorite tools',
-        label: 'Connectivity'
+        title: 'Next Step',
+        description: 'Earn new tokens from upcoming projects',
+        label: 'Launchpool'
     },
     {
         color: '#0c0e4d',
+        title: 'Refer',
+        description: 'Invite and Earn',
+        label: 'Invite'
+    },
+    {
+        color: '#060010',
         title: 'Security',
         description: 'Enterprise-grade protection',
         label: 'Protection'

@@ -1,7 +1,7 @@
 import React from "react";
 import gsap from 'gsap';
 import { ScrollTrigger, SplitText } from "gsap/all";
-import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import {BrowserRouter as Router, Navigate, Route, Routes} from "react-router-dom";
 import Navbar from './components/Navbar';
 
 import Hero from "/src/Hero.jsx";
@@ -18,6 +18,7 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 
 
 const App = () => {
+
  return (
 	 <Router>
 

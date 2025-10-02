@@ -228,7 +228,7 @@ body {
     #wallet{
         @apply relative z-10 min-h-dvh w-full border border-transparent border-t-20  ;
         .content {
-            @apply grid grid-cols-1 lg:grid-cols-12 gap-5 pt-40;
+            @apply flex-center items-center justify-center px-5;
             .top-wallet{
                 @apply flex flex-col items-center justify-center px-5;
                 > img{

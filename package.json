@@ -11,7 +11,10 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
+    "@reown/walletkit": "^1.2.11",
     "@tailwindcss/vite": "^4.1.13",
+    "@walletconnect/core": "^2.21.9",
+    "@walletconnect/utils": "^2.21.9",
     "chart.js": "^4.5.0",
     "gsap": "^3.13.0",
     "react": "^19.1.1",

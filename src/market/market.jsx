@@ -84,7 +84,7 @@ export default function Market() {
                             placeholder="Search stocks..."
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
-                            className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#8bc819] focus:border-transparent"
+                            className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#8bc819] focus:border-transparent       "
                         />
                     </div>
                     <button

@@ -8,7 +8,7 @@ export default function StockCard({ stock, onToggleFavorite, onSelect }) {
 
     return (
         <div
-            className="rounded-xl p-4 border backdrop-blur-2xl border-gray-200 hover:bg-dark transition-all cursor-pointer"
+            className="rounded-xl p-4 border bg-blue border-gray-200 hover:bg-black transition-all cursor-pointer"
             onClick={() => onSelect(stock)}
         >
             <div className="flex items-start justify-between mb-3">
